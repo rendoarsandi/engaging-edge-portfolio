@@ -144,8 +144,8 @@ const ContactSection: React.FC = () => {
               </div>
               <div>
                 <h4 className="text-lg font-medium mb-1">Email</h4>
-                <a href="mailto:contact@yourportfolio.com" className="text-foreground/80 hover:text-primary transition-colors">
-                  contact@yourportfolio.com
+                <a href="mailto:rensoarsandi@gmail.com" className="text-foreground/80 hover:text-primary transition-colors">
+                  rensoarsandi@gmail.com
                 </a>
                 <p className="text-sm text-foreground/60 mt-1">Feel free to reach out anytime</p>
               </div>
