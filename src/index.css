@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -41,10 +40,19 @@
   * {
     @apply border-border;
   }
+  
+  html, body {
+    @apply min-h-screen;
+  }
+  
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
     overflow-x: hidden;
+  }
+  
+  .app-container {
+    @apply min-h-screen relative z-10;
   }
 }
 

@@ -24,15 +24,12 @@ const HeroSection: React.FC = () => {
   }, []);
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden bg-gradient-to-b from-background to-background/70">
-      {/* Enhanced background decoration elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full bg-hero-pattern opacity-30"></div>
-        <div className="absolute top-[10%] left-[15%] w-72 h-72 bg-primary/30 rounded-full filter blur-3xl animate-pulse-slow"></div>
-        <div className="absolute bottom-[20%] right-[10%] w-96 h-96 bg-secondary/30 rounded-full filter blur-3xl animate-pulse-slow" style={{ animationDelay: "2s" }}></div>
-        <div className="absolute top-[40%] right-[20%] w-64 h-64 bg-purple-500/20 rounded-full filter blur-3xl animate-pulse-slow" style={{ animationDelay: "3s" }}></div>
-        <div className="absolute bottom-[10%] left-[20%] w-80 h-80 bg-blue-500/20 rounded-full filter blur-3xl animate-pulse-slow" style={{ animationDelay: "4s" }}></div>
-      </div>
+    <section id="home" className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden">
+      {/* Additional floating decoration elements */}
+      <div className="absolute top-[10%] left-[15%] w-72 h-72 bg-primary/30 rounded-full filter blur-3xl animate-pulse-slow"></div>
+      <div className="absolute bottom-[20%] right-[10%] w-96 h-96 bg-secondary/30 rounded-full filter blur-3xl animate-pulse-slow" style={{ animationDelay: "2s" }}></div>
+      <div className="absolute top-[40%] right-[20%] w-64 h-64 bg-purple-500/20 rounded-full filter blur-3xl animate-pulse-slow" style={{ animationDelay: "3s" }}></div>
+      <div className="absolute bottom-[10%] left-[20%] w-80 h-80 bg-blue-500/20 rounded-full filter blur-3xl animate-pulse-slow" style={{ animationDelay: "4s" }}></div>
 
       {/* Floating code elements */}
       <div className="absolute top-1/4 left-10 md:left-20 opacity-20 animate-float">
