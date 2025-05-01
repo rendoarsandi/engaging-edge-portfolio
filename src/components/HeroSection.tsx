@@ -1,13 +1,26 @@
 
 import React, { useEffect, useState } from "react";
-import { ArrowRight, Code, Code2, Database } from "lucide-react";
+import { ArrowRight, Code, Code2, Database, ChevronDown } from "lucide-react";
 import AnimatedText from "./ui/AnimatedText";
 
 const HeroSection: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [showScrollIndicator, setShowScrollIndicator] = useState(true);
 
   useEffect(() => {
     setIsVisible(true);
+
+    // Hide scroll indicator when scrolling past a certain point
+    const handleScroll = () => {
+      if (window.scrollY > window.innerHeight * 0.5) {
+        setShowScrollIndicator(false);
+      } else {
+        setShowScrollIndicator(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -87,13 +100,15 @@ const HeroSection: React.FC = () => {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
-        <span className="text-sm text-foreground/60 mb-2">Scroll Down</span>
-        <div className="w-5 h-10 border-2 border-foreground/30 rounded-full flex justify-center items-start p-1">
-          <div className="w-1 h-2 bg-primary rounded-full animate-[pulse_1.5s_infinite]"></div>
+      {/* Fixed Scroll indicator that follows the screen */}
+      {showScrollIndicator && (
+        <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center z-50 transition-opacity duration-300">
+          <span className="text-sm text-foreground/60 mb-2 px-3 py-1 backdrop-blur-sm rounded-full bg-background/30">Scroll Down</span>
+          <div className="animate-bounce">
+            <ChevronDown className="text-primary h-6 w-6" />
+          </div>
         </div>
-      </div>
+      )}
     </section>
   );
 };
