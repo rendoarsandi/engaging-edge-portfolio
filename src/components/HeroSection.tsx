@@ -24,11 +24,14 @@ const HeroSection: React.FC = () => {
   }, []);
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden bg-hero-pattern">
-      {/* Background decoration elements */}
+    <section id="home" className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden bg-gradient-to-b from-background to-background/70">
+      {/* Enhanced background decoration elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-[10%] left-[15%] w-72 h-72 bg-primary/20 rounded-full filter blur-3xl animate-pulse-slow"></div>
-        <div className="absolute bottom-[20%] right-[10%] w-96 h-96 bg-secondary/20 rounded-full filter blur-3xl animate-pulse-slow" style={{ animationDelay: "2s" }}></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%239C92AC\" fill-opacity=\"0.05\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+        <div className="absolute top-[10%] left-[15%] w-72 h-72 bg-primary/30 rounded-full filter blur-3xl animate-pulse-slow"></div>
+        <div className="absolute bottom-[20%] right-[10%] w-96 h-96 bg-secondary/30 rounded-full filter blur-3xl animate-pulse-slow" style={{ animationDelay: "2s" }}></div>
+        <div className="absolute top-[40%] right-[20%] w-64 h-64 bg-purple-500/20 rounded-full filter blur-3xl animate-pulse-slow" style={{ animationDelay: "3s" }}></div>
+        <div className="absolute bottom-[10%] left-[20%] w-80 h-80 bg-blue-500/20 rounded-full filter blur-3xl animate-pulse-slow" style={{ animationDelay: "4s" }}></div>
       </div>
 
       {/* Floating code elements */}
@@ -47,7 +50,9 @@ const HeroSection: React.FC = () => {
           <h1 className={`text-4xl md:text-7xl font-bold mb-6 transition-all duration-1000 ${
             isVisible ? "opacity-100" : "opacity-0 translate-y-10"
           }`}>
-            <span className="block mb-2">
+            <span className="block mb-2 relative">
+              {/* Gradient background for the title */}
+              <span className="absolute inset-0 blur-xl bg-gradient-to-r from-primary/40 via-secondary/40 to-primary/40 rounded-2xl -z-10"></span>
               <AnimatedText 
                 text="Full-Stack Web Developer" 
                 className="gradient-text"
@@ -89,7 +94,7 @@ const HeroSection: React.FC = () => {
               {["HTML5", "CSS3", "JavaScript", "React", "Node.js", "MongoDB", "TypeScript", "Tailwind CSS"].map((tech, index) => (
                 <span 
                   key={tech} 
-                  className="px-4 py-2 rounded-full glass-card text-sm font-medium animate-fade-in"
+                  className="px-4 py-2 rounded-full glass-card text-sm font-medium animate-fade-in backdrop-blur-sm bg-white/5"
                   style={{ animationDelay: `${0.1 * index}s` }}
                 >
                   {tech}

@@ -1,8 +1,14 @@
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+}
+
+body {
+  background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--background) / 0.7) 100%);
+  background-attachment: fixed;
 }
 
 .logo {
@@ -39,4 +45,43 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/* Enhanced gradient for special elements */
+.special-gradient {
+  background: linear-gradient(60deg, hsl(var(--primary) / 0.3) 0%, hsl(var(--secondary) / 0.3) 100%);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Title gradient effect */
+.title-gradient-bg {
+  position: relative;
+}
+
+.title-gradient-bg::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: -10%;
+  width: 120%;
+  height: 140%;
+  background: linear-gradient(90deg, hsla(var(--primary)), hsla(var(--secondary)));
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  opacity: 0.15;
+  filter: blur(15px);
+  z-index: -1;
+  animation: morph 8s ease-in-out infinite;
+}
+
+@keyframes morph {
+  0% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  }
+  50% {
+    border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+  }
+  100% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  }
 }
