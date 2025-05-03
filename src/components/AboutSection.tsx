@@ -1,6 +1,6 @@
-
 import React, { useEffect } from "react";
 import { Check, Code, Database, Globe, Layout, Server } from "lucide-react";
+import TrueFocus from "./TrueFocus";
 
 const AboutSection: React.FC = () => {
   useEffect(() => {
@@ -41,7 +41,15 @@ const AboutSection: React.FC = () => {
           {/* About content */}
           <div className="lg:w-1/2">
             <h2 className="text-3xl md:text-4xl font-bold mb-8 reveal">
-              <span className="text-gradient">About Me</span>
+              <TrueFocus 
+                sentence="About Me" 
+                blurAmount={3}
+                borderColor="hsl(var(--primary))"
+                glowColor="rgba(120, 80, 255, 0.6)"
+                animationDuration={0.8}
+                pauseBetweenAnimations={2}
+                className="text-3xl md:text-4xl font-bold"
+              />
             </h2>
             
             <div className="space-y-4 reveal" style={{ transitionDelay: '200ms' }}>

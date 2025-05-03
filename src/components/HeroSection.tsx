@@ -1,11 +1,14 @@
-
 import React, { useEffect, useState } from "react";
 import { ArrowRight, Code, Code2, Database, ChevronDown } from "lucide-react";
 import AnimatedText from "./ui/AnimatedText";
+import SimpleSplitText from "./SimpleSplitText";
+import DecryptedText from "./DecryptedText";
 
 const HeroSection: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [showScrollIndicator, setShowScrollIndicator] = useState(true);
+  const [textAnimationComplete, setTextAnimationComplete] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
@@ -22,6 +25,11 @@ const HeroSection: React.FC = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleAnimationComplete = () => {
+    setTextAnimationComplete(true);
+    console.log('All letters have animated!');
+  };
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden">
@@ -47,24 +55,53 @@ const HeroSection: React.FC = () => {
           <h1 className={`text-4xl md:text-7xl font-bold mb-6 transition-all duration-1000 ${
             isVisible ? "opacity-100" : "opacity-0 translate-y-10"
           }`}>
-            <span className="block mb-2 relative">
-              {/* Gradient background for the title */}
-              <span className="absolute inset-0 blur-xl bg-gradient-to-r from-primary/40 via-secondary/40 to-primary/40 rounded-2xl -z-10"></span>
-              <AnimatedText 
-                text="Full-Stack Web Developer" 
-                className="gradient-text"
-                delay={500}
-                speed={80}
-              />
+            <span 
+              className="block mb-2 relative"
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
+              {/* Enhanced gradient background with hover effect */}
+              <span 
+                className={`absolute inset-0 blur-xl bg-gradient-to-r from-primary/40 via-secondary/40 to-primary/40 rounded-2xl -z-10 transition-all duration-500 ${
+                  isHovered ? 'scale-110 opacity-90 shadow-glow' : ''
+                }`}
+                style={{
+                  filter: isHovered ? 'blur(20px)' : 'blur(15px)',
+                  boxShadow: isHovered ? '0 0 30px rgba(120, 80, 255, 0.5)' : 'none'
+                }}
+              ></span>
+              
+              {/* Using SimpleSplitText */}
+              <span className={`transition-all duration-300 ${isHovered ? 'scale-105' : ''}`}>
+                {textAnimationComplete ? (
+                  <span className="gradient-text font-bold text-4xl md:text-7xl">Full-Stack Web Developer</span>
+                ) : (
+                  <SimpleSplitText 
+                    text="Full-Stack Web Developer"
+                    className="gradient-text font-bold text-4xl md:text-7xl"
+                    delay={70}
+                    onComplete={handleAnimationComplete}
+                  />
+                )}
+              </span>
             </span>
           </h1>
 
-          <p className={`max-w-2xl mx-auto text-lg md:text-xl text-foreground/80 mb-8 transition-all duration-1000 delay-300 ${
+          <div className={`max-w-2xl mx-auto transition-all duration-1000 delay-300 ${
             isVisible ? "opacity-100" : "opacity-0 translate-y-10"
           }`}>
-            Building seamless web experiences with modern frontend and powerful backend technologies.
-            Let's create something amazing together.
-          </p>
+            <DecryptedText
+              text="Building seamless web experiences with modern frontend and powerful backend technologies. Let's create something amazing together."
+              className="text-lg md:text-xl text-foreground/80 mb-8"
+              parentClassName="mb-8"
+              encryptedClassName="text-lg md:text-xl text-primary/70"
+              animateOn="view"
+              sequential={true}
+              speed={30}
+              revealDirection="center"
+              characters="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*()_+"
+            />
+          </div>
 
           <div className={`flex flex-col sm:flex-row gap-4 transition-all duration-1000 delay-500 ${
             isVisible ? "opacity-100" : "opacity-0 translate-y-10"

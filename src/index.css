@@ -68,6 +68,11 @@
   .glass-card {
     @apply bg-card/60 backdrop-blur-md border border-white/10;
   }
+  
+  .shadow-glow {
+    @apply shadow-lg;
+    box-shadow: 0 0 25px rgba(120, 80, 255, 0.6), 0 0 10px rgba(80, 160, 255, 0.4);
+  }
 }
 
 .reveal {
@@ -129,4 +134,54 @@
 .code-block::-webkit-scrollbar-thumb {
   background: hsl(var(--primary) / 0.8);
   border-radius: 10px;
+}
+
+/* Shape Blur Animations */
+@keyframes pulseBlur {
+  0% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulseBlurAlt {
+  0% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+.pulse-blur-slow {
+  animation: pulseBlur 18s ease-in-out infinite;
+}
+
+.pulse-blur-medium {
+  animation: pulseBlurAlt 14s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.pulse-blur-fast {
+  animation: pulseBlur 10s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.pulse-blur-very-fast {
+  animation: pulseBlurAlt 7s ease-in-out infinite;
+  animation-delay: 3s;
 }
