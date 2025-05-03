@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
@@ -157,8 +156,8 @@ const ContactSection: React.FC = () => {
               </div>
               <div>
                 <h4 className="text-lg font-medium mb-1">Phone</h4>
-                <a href="tel:+62123456789" className="text-foreground/80 hover:text-primary transition-colors">
-                  +62 123 456 789
+                <a href="tel:+6281289332086" className="text-foreground/80 hover:text-primary transition-colors">
+                  +62 812 8933 2086
                 </a>
                 <p className="text-sm text-foreground/60 mt-1">Monday to Friday, 9am to 6pm</p>
               </div>

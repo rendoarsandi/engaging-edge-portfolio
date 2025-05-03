@@ -318,16 +318,16 @@ const ServicesSection: React.FC = () => {
           <div className="glass-card rounded-xl p-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
-                <h3 className="text-4xl font-bold text-gradient mb-2">100+</h3>
-                <p className="text-foreground/80">Projects Completed</p>
-              </div>
-              <div className="text-center">
-                <h3 className="text-4xl font-bold text-gradient mb-2">50+</h3>
-                <p className="text-foreground/80">Happy Clients</p>
-              </div>
-              <div className="text-center">
                 <h3 className="text-4xl font-bold text-gradient mb-2">5+</h3>
-                <p className="text-foreground/80">Years of Experience</p>
+                <p className="text-foreground/80">Personal Projects</p>
+              </div>
+              <div className="text-center">
+                <h3 className="text-4xl font-bold text-gradient mb-2">10+</h3>
+                <p className="text-foreground/80">Technologies Mastered</p>
+              </div>
+              <div className="text-center">
+                <h3 className="text-4xl font-bold text-gradient mb-2">100%</h3>
+                <p className="text-foreground/80">Commitment to Quality</p>
               </div>
             </div>
           </div>

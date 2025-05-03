@@ -113,23 +113,16 @@ const AboutSection: React.FC = () => {
                 <div className="space-y-6">
                   <div className="relative pl-8 pb-6 border-l-2 border-muted">
                     <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-primary"></div>
-                    <h4 className="font-medium">Senior Web Developer</h4>
-                    <p className="text-sm text-foreground/70">TechSolutions Inc. • 2021 - Present</p>
-                    <p className="mt-2 text-sm">Leading development of enterprise web applications and mentoring junior developers.</p>
-                  </div>
-                  
-                  <div className="relative pl-8 pb-6 border-l-2 border-muted">
-                    <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-secondary"></div>
-                    <h4 className="font-medium">Full-Stack Developer</h4>
-                    <p className="text-sm text-foreground/70">WebCraft Studio • 2018 - 2021</p>
-                    <p className="mt-2 text-sm">Developed and maintained various client projects from concept to deployment.</p>
+                    <h4 className="font-medium">Aspiring Full-Stack Developer</h4>
+                    <p className="text-sm text-foreground/70">Self-taught • Present</p>
+                    <p className="mt-2 text-sm">I am a self-taught developer with a strong foundation in modern web technologies. Currently looking for opportunities to apply my skills and grow as a developer.</p>
                   </div>
                   
                   <div className="relative pl-8">
                     <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-muted"></div>
-                    <h4 className="font-medium">Frontend Developer</h4>
-                    <p className="text-sm text-foreground/70">DigitalEdge • 2016 - 2018</p>
-                    <p className="mt-2 text-sm">Created responsive and interactive user interfaces for web applications.</p>
+                    <h4 className="font-medium">Coding Enthusiast</h4>
+                    <p className="text-sm text-foreground/70">Personal Projects</p>
+                    <p className="mt-2 text-sm">Actively working on personal projects to expand my skills in full-stack development, with a focus on React, Node.js, and modern web technologies.</p>
                   </div>
                 </div>
               </div>
