@@ -60,6 +60,10 @@
   .btn-primary {
     @apply bg-primary hover:bg-primary/90 text-primary-foreground font-medium rounded-md transition-colors duration-200;
   }
+  
+  .btn-secondary {
+    @apply bg-secondary hover:bg-secondary/90 text-secondary-foreground font-medium rounded-md transition-colors duration-200;
+  }
 }
 
 @layer utilities {

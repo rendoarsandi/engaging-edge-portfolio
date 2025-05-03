@@ -255,6 +255,63 @@ const ServicesSection: React.FC = () => {
               </a>
             </div>
           </div>
+          
+          {/* Custom Project Option */}
+          <div className="mt-12 reveal" style={{ transitionDelay: '1600ms' }}>
+            <div className="glass-card rounded-xl p-8 border-2 border-secondary/30 shadow-glow">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                <div className="md:col-span-8">
+                  <h4 className="text-2xl font-bold mb-3">Need a Custom Solution?</h4>
+                  <p className="text-lg mb-4">
+                    For complex projects requiring advanced features like:
+                  </p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+                    <div className="flex items-start">
+                      <span className="text-secondary mr-2">✓</span>
+                      <span>Complex API integrations</span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="text-secondary mr-2">✓</span>
+                      <span>Enterprise-scale applications</span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="text-secondary mr-2">✓</span>
+                      <span>AI-powered features</span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="text-secondary mr-2">✓</span>
+                      <span>Custom database architecture</span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="text-secondary mr-2">✓</span>
+                      <span>Third-party system integrations</span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="text-secondary mr-2">✓</span>
+                      <span>Scalable cloud infrastructure</span>
+                    </div>
+                  </div>
+                  <p className="text-foreground/80">
+                    Let's discuss your specific requirements and create a tailored solution that perfectly meets your needs.
+                  </p>
+                </div>
+                <div className="md:col-span-4 flex justify-center md:justify-end">
+                  <a 
+                    href="https://www.upwork.com/freelancers/~01177c3a19d0d092e1?mp_source=share" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="btn-secondary px-8 py-4 rounded-lg text-lg font-medium transition-all duration-300 hover:scale-105 inline-flex items-center"
+                  >
+                    Contact for Custom Quote
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2">
+                      <path d="M5 12h14"></path>
+                      <path d="m12 5 7 7-7 7"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="mt-16 pt-10 border-t border-border reveal" style={{ transitionDelay: '1000ms' }}>
