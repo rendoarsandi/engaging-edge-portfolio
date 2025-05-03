@@ -56,6 +56,12 @@
   }
 }
 
+@layer components {
+  .btn-primary {
+    @apply bg-primary hover:bg-primary/90 text-primary-foreground font-medium rounded-md transition-colors duration-200;
+  }
+}
+
 @layer utilities {
   .text-gradient {
     @apply text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary;
