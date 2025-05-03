@@ -102,32 +102,42 @@ const ServicesSection: React.FC = () => {
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Basic Package */}
-            <div className="glass-card rounded-xl p-8 flex flex-col h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-2">
-              <h4 className="text-xl font-bold mb-2">Basic</h4>
-              <p className="text-3xl font-bold text-gradient mb-4">$799</p>
-              <ul className="mb-6 flex-grow space-y-2">
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
-                  <span>Responsive design</span>
+            {/* Starter Package */}
+            <div className="glass-card rounded-xl p-8 flex flex-col h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-2 border-2 border-transparent">
+              <h4 className="text-xl font-bold mb-2">Starter</h4>
+              <p className="text-3xl font-bold text-gradient mb-4">$50</p>
+              <h5 className="text-lg font-bold mb-2">Basic Web Presence</h5>
+              <p className="text-sm text-foreground/80 mb-4">Simple 1-page website to establish your online presence</p>
+              <ul className="mb-6 flex-grow space-y-3">
+                <li className="flex items-start justify-between">
+                  <span>Delivery Time</span>
+                  <span className="font-medium">3 days</span>
                 </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
-                  <span>Up to 5 pages</span>
+                <li className="flex items-start justify-between">
+                  <span>Number of Pages</span>
+                  <span className="font-medium">1</span>
                 </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
-                  <span>Basic SEO optimization</span>
+                <li className="flex items-start justify-between">
+                  <span>Number of Revisions</span>
+                  <span className="font-medium">Unlimited</span>
                 </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
-                  <span>Contact form</span>
+                <li className="flex items-start justify-between">
+                  <span>Source Files</span>
+                  <span className="text-primary">✓</span>
                 </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
-                  <span>Mobile-friendly</span>
+                <li className="flex items-start justify-between">
+                  <span>Commercial Use</span>
+                  <span className="text-primary">✓</span>
+                </li>
+                <li className="flex items-start justify-between">
+                  <span>Responsive Design</span>
+                  <span className="text-primary">✓</span>
                 </li>
               </ul>
+              <div className="text-xs text-foreground/60 mb-4 flex items-center">
+                <span className="mr-2">⏱️</span>
+                <span>3 days delivery — Revisions may occur after this date.</span>
+              </div>
               <a 
                 href="https://www.upwork.com/services/product/design-standard-business-website-premium-website-solution-1918621449202979190?ref=project_share" 
                 target="_blank" 
@@ -144,33 +154,43 @@ const ServicesSection: React.FC = () => {
                 Popular
               </div>
               <h4 className="text-xl font-bold mb-2">Standard</h4>
-              <p className="text-3xl font-bold text-gradient mb-4">$1299</p>
-              <ul className="mb-6 flex-grow space-y-2">
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
-                  <span>Everything in Basic</span>
+              <p className="text-3xl font-bold text-gradient mb-4">$75</p>
+              <h5 className="text-lg font-bold mb-2">Standard Business Website</h5>
+              <p className="text-sm text-foreground/80 mb-4">Ideal for businesses needing a functional website with basic user interaction.</p>
+              <ul className="mb-6 flex-grow space-y-3">
+                <li className="flex items-start justify-between">
+                  <span>Delivery Time</span>
+                  <span className="font-medium">7 days</span>
                 </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
-                  <span>Up to 10 pages</span>
+                <li className="flex items-start justify-between">
+                  <span>Number of Pages</span>
+                  <span className="font-medium">5</span>
                 </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
-                  <span>Advanced SEO</span>
+                <li className="flex items-start justify-between">
+                  <span>Number of Revisions</span>
+                  <span className="font-medium">Unlimited</span>
                 </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
-                  <span>Blog integration</span>
+                <li className="flex items-start justify-between">
+                  <span>Source Files</span>
+                  <span className="text-primary">✓</span>
                 </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
-                  <span>Social media integration</span>
+                <li className="flex items-start justify-between">
+                  <span>Commercial Use</span>
+                  <span className="text-primary">✓</span>
                 </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
-                  <span>Basic animations</span>
+                <li className="flex items-start justify-between">
+                  <span>Convert to HTML/CSS</span>
+                  <span className="text-primary">✓</span>
+                </li>
+                <li className="flex items-start justify-between">
+                  <span>Responsive Design</span>
+                  <span className="text-primary">✓</span>
                 </li>
               </ul>
+              <div className="text-xs text-foreground/60 mb-4 flex items-center">
+                <span className="mr-2">⏱️</span>
+                <span>7 days delivery — Revisions may occur after this date.</span>
+              </div>
               <a 
                 href="https://www.upwork.com/services/product/design-standard-business-website-premium-website-solution-1918621449202979190?ref=project_share&tier=1" 
                 target="_blank" 
@@ -182,39 +202,49 @@ const ServicesSection: React.FC = () => {
             </div>
             
             {/* Advanced Package */}
-            <div className="glass-card rounded-xl p-8 flex flex-col h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-2">
-              <h4 className="text-xl font-bold mb-2">Premium</h4>
-              <p className="text-3xl font-bold text-gradient mb-4">$2499</p>
-              <ul className="mb-6 flex-grow space-y-2">
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
-                  <span>Everything in Standard</span>
+            <div className="glass-card rounded-xl p-8 flex flex-col h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-2 border-2 border-transparent">
+              <h4 className="text-xl font-bold mb-2">Advanced</h4>
+              <p className="text-3xl font-bold text-gradient mb-4">$250</p>
+              <h5 className="text-lg font-bold mb-2">Premium Website Solution</h5>
+              <p className="text-sm text-foreground/80 mb-4">A comprehensive package for businesses requiring a dynamic, backend database.</p>
+              <ul className="mb-6 flex-grow space-y-3">
+                <li className="flex items-start justify-between">
+                  <span>Delivery Time</span>
+                  <span className="font-medium">30 days</span>
                 </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
-                  <span>Unlimited pages</span>
+                <li className="flex items-start justify-between">
+                  <span>Number of Pages</span>
+                  <span className="font-medium">15</span>
                 </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
-                  <span>E-commerce integration</span>
+                <li className="flex items-start justify-between">
+                  <span>Number of Revisions</span>
+                  <span className="font-medium">Unlimited</span>
                 </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
-                  <span>Custom animations</span>
+                <li className="flex items-start justify-between">
+                  <span>Source Files</span>
+                  <span className="text-primary">✓</span>
                 </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
-                  <span>Performance optimization</span>
+                <li className="flex items-start justify-between">
+                  <span>Commercial Use</span>
+                  <span className="text-primary">✓</span>
                 </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
-                  <span>Advanced features</span>
+                <li className="flex items-start justify-between">
+                  <span>Convert to HTML/CSS</span>
+                  <span className="text-primary">✓</span>
                 </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
-                  <span>Premium support</span>
+                <li className="flex items-start justify-between">
+                  <span>Responsive Design</span>
+                  <span className="text-primary">✓</span>
+                </li>
+                <li className="flex items-start justify-between">
+                  <span>Interactive Mockup</span>
+                  <span className="text-primary">✓</span>
                 </li>
               </ul>
+              <div className="text-xs text-foreground/60 mb-4 flex items-center">
+                <span className="mr-2">⏱️</span>
+                <span>30 days delivery — Revisions may occur after this date.</span>
+              </div>
               <a 
                 href="https://www.upwork.com/services/product/design-standard-business-website-premium-website-solution-1918621449202979190?ref=project_share&tier=2" 
                 target="_blank" 
